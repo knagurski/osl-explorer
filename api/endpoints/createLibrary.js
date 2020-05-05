@@ -1,6 +1,6 @@
 const assert = require("assert");
-const { getJSONResponse, handleError } = require("../util");
-const { createLibrary } = require("../explorer");
+const { getJSONResponse, handleError } = require("./util");
+const { createLibrary } = require("./explorer");
 
 exports.handler = async ({ httpMethod, body }) => {
   try {

@@ -1,6 +1,11 @@
 const assert = require("assert");
-const { getJSONResponse, trimId, getNotFoundResponse, handleError } = require("../util");
-const { updateLibrary, getLibraryById } = require("../explorer");
+const {
+  getJSONResponse,
+  trimId,
+  getNotFoundResponse,
+  handleError,
+} = require("./util");
+const { updateLibrary, getLibraryById } = require("./explorer");
 
 exports.handler = async ({
   httpMethod,

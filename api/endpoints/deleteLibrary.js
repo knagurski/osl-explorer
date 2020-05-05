@@ -4,8 +4,8 @@ const {
   trimId,
   getNotFoundResponse,
   handleError,
-} = require("../util");
-const { deleteLibrary } = require("../explorer");
+} = require("./util");
+const { deleteLibrary } = require("./explorer");
 
 exports.handler = async ({
   httpMethod,
