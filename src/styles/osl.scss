@@ -1,9 +1,17 @@
 @import "vars";
 
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../mavenpro.woff') format('woff');
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, sans-serif;
+  font-family: "Maven Pro", -apple-system, sans-serif;
+  font-weight: 500;
   color: var(--fontColor);
   line-height: 1.5;
 }
