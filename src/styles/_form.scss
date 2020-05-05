@@ -90,13 +90,8 @@
     justify-content: flex-end;
     grid-column: 1 / -1;
 
-    > * + * {
+    > * {
       margin-left: $margin;
-    }
-
-    .osl-button--delete {
-      order: -1;
-      justify-self: flex-start;
     }
   }
 

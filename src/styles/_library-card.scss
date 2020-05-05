@@ -14,7 +14,7 @@
   &:focus-within {
     box-shadow: 0 0 0 3px $inputHighlightColor;
 
-    a {
+    a[href^="/edit"] {
       outline: none;
     }
   }
@@ -36,7 +36,7 @@
     display: grid;
     grid-template-columns: max-content minmax(100px, 1fr);
     grid-template-rows: min-content 1fr;
-    grid-gap: $margin;
+    grid-gap: $marginSm;
   }
 
   &__detail-title {
@@ -50,6 +50,7 @@
 
   &__detail-info {
     margin-inline-start: 0;
+    font-weight: 900;
 
     &--name {
       grid-column: 1/-1;
@@ -66,6 +67,7 @@
       grid-column: 1/-1;
       max-height: 10.5rem;
       overflow: hidden;
+      margin-bottom: $marginLg;
     }
   }
 }
