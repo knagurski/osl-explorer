@@ -2,8 +2,13 @@ importScripts(
   "https://storage.googleapis.com/workbox-cdn/releases/5.0.0/workbox-sw.js"
 );
 
-const { registerRoute } = workbox.routing;
-const { StaleWhileRevalidate, CacheFirst, NetworkFirst } = workbox.strategies;
+const { registerRoute, setDefaultHandler } = workbox.routing;
+const {
+  StaleWhileRevalidate,
+  CacheFirst,
+  NetworkFirst,
+  NetworkOnly,
+} = workbox.strategies;
 const { ExpirationPlugin } = workbox.expiration;
 
 registerRoute(
@@ -29,9 +34,11 @@ registerRoute(
   new NetworkFirst({ cacheName: "libraries" })
 );
 
+registerRoute(/functions\/./, new NetworkOnly());
+
 registerRoute(
   /functions\/getLibraries/,
   new NetworkFirst({ cacheName: "libraries" })
 );
 
-registerRoute(/^\/$/, new CacheFirst({ cacheName: "html" }));
+setDefaultHandler(new StaleWhileRevalidate());
