@@ -11,7 +11,7 @@ const AppHeader = () => {
     <header className="osl-header osl__section">
       <h1 className="osl-header__heading">
         <Link to="/">
-          OSL
+          <span>OSL</span>
           <small className="osl-header__sub-heading">
             the Open Source Library explorer
           </small>

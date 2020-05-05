@@ -1,3 +1,5 @@
+@import "vars";
+
 .osl-header {
   background-color: var(--bgColor);
 
@@ -10,13 +12,26 @@
     a {
       color: inherit;
       text-decoration: none;
+      display: grid;
+      grid-template-columns: max-content max-content;
+      grid-column-gap: $marginSm;
+      align-items: baseline;
+
+      &::before {
+        display: block;
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        background: url("../images/logo.svg") no-repeat center center;
+        background-size: contain;
+      }
     }
   }
 
   &__sub-heading {
     font-weight: bold;
     font-size: .3em;
-    display: block;
     color: var(--fontColorLight);
+    grid-column: 2;
   }
 }
