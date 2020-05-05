@@ -69,5 +69,11 @@
       overflow: hidden;
       margin-bottom: $marginLg;
     }
+
+    &--homepage {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
