@@ -113,11 +113,13 @@ const LibraryForm = ({
           value={repository}
           required
         >
-          {["npm", "Maven", "Nuget", "PyPI", "RubyGems"].map((repo) => (
-            <option key={repo} value={repo}>
-              {repo}
-            </option>
-          ))}
+          {["npm", "Composer", "Maven", "Nuget", "PyPI", "RubyGems"].map(
+            (repo) => (
+              <option key={repo} value={repo}>
+                {repo}
+              </option>
+            )
+          )}
         </select>
       </div>
 

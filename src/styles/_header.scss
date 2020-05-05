@@ -15,7 +15,7 @@
       display: grid;
       grid-template-columns: max-content max-content;
       grid-column-gap: $marginSm;
-      align-items: baseline;
+      align-items: center;
 
       &::before {
         display: block;
