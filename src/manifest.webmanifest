@@ -9,7 +9,7 @@
   "display": "minimal-ui",
   "icons": [
     {
-      "src": "./images/logo.png",
+      "src": "./images/logo100x100.png",
       "type": "image/png",
       "sizes": "100x100"
     },
