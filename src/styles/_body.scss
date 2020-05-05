@@ -1,0 +1,10 @@
+@import "vars";
+
+.osl-body {
+  padding: $paddingLg 0;
+  background: linear-gradient(
+    to bottom,
+    darken($pageBgColor, 10%),
+    transparent 5px
+  );
+}

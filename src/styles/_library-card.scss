@@ -1,0 +1,71 @@
+@import "vars";
+
+.osl-library-card {
+  --image-bg-color: lightgray;
+
+  overflow: hidden;
+  border-radius: $borderRadius;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  background-color: var(--bgColor);
+  filter: $dropShadow;
+  cursor: pointer;
+
+  &:focus-within {
+    box-shadow: 0 0 0 3px $inputHighlightColor;
+
+    a {
+      outline: none;
+    }
+  }
+
+  &__image {
+    background: var(--image-bg-color);
+    padding: $paddingLg;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: invert(1);
+    }
+  }
+
+  &__details {
+    margin: $marginLg;
+    display: grid;
+    grid-template-columns: max-content minmax(100px, 1fr);
+    grid-template-rows: min-content 1fr;
+    grid-gap: $margin;
+  }
+
+  &__detail-title {
+    color: var(--fontColorLight);
+
+    &--name,
+    &--description {
+      display: none;
+    }
+  }
+
+  &__detail-info {
+    margin-inline-start: 0;
+
+    &--name {
+      grid-column: 1/-1;
+      font-size: 2em;
+      line-height: 1;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    &--description {
+      grid-column: 1/-1;
+      max-height: 10.5rem;
+      overflow: hidden;
+    }
+  }
+}

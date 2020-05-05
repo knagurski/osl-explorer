@@ -1,0 +1,49 @@
+@import "vars";
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, sans-serif;
+  color: var(--fontColor);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.osl {
+  display: grid;
+  background-color: var(--pageBgColor);
+  min-height: 100vh;
+  grid-template-rows: max-content 1fr max-content;
+
+  &__section {
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 1200px) 1fr;
+    grid-column-gap: $marginLg;
+
+    > * {
+      grid-column: 2;
+    }
+  }
+
+
+  &__no-js-message {
+    padding: $paddingLg;
+    margin: $marginLg;
+    background: white;
+    max-width: 500px;
+    justify-self: center;
+    align-self: center;
+    border-radius: $borderRadius;
+    filter: $dropShadow;
+  }
+}
+
+@import "header";
+@import "body";
+@import "form";
+@import "button";
+@import "listings";
+@import "library-card";

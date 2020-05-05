@@ -1,0 +1,26 @@
+@import "vars";
+
+.osl-button {
+  cursor: pointer;
+  padding: $padding;
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: $borderRadius;
+  filter: $dropShadow;
+  outline: none;
+  font-size: 1rem;
+  color: var(--fontColor);
+  text-decoration: none;
+
+  &:focus {
+    box-shadow: 0 0 0 3px $inputHighlightColor;
+  }
+
+  &--submit {
+    background-color: var(--buttonColorSubmit);
+  }
+
+  &--delete {
+    background-color: crimson;
+  }
+}

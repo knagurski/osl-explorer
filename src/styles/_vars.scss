@@ -1,0 +1,27 @@
+$padding: 1rem;
+$paddingLg: 2rem;
+$marginSm: .5rem;
+$margin: 1rem;
+$marginLg: 2rem;
+$marginXL: 3rem;
+$borderRadius: .5rem;
+$dropShadow: drop-shadow(0 1px 5px rgba(0,0,0,.1));
+
+$fontColor: rgb(30,30,30);
+$fontColorLight: rgb(80,80,80);
+$bgColor: rgb(255,255,255);
+$pageBgColor: rgb(250,250,250);
+
+$inputHighlightColor: rgb(255,105,180);
+
+$buttonColor: rgb(255,255,255);
+$buttonColorSubmit: rgb(200,200,200);
+
+:root {
+  --fontColor: #{$fontColor};
+  --fontColorLight: #{$fontColorLight};
+  --bgColor: #{$bgColor};
+  --pageBgColor: #{$pageBgColor};
+  --buttonColor: #{$buttonColor};
+  --buttonColorSubmit: #{$buttonColorSubmit};
+}

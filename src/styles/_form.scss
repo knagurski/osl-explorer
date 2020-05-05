@@ -1,0 +1,124 @@
+@import "vars";
+
+.osl-form {
+  display: grid;
+  grid-template-columns: max-content minmax(320px, 1fr);
+  grid-gap: $margin;
+  align-items: baseline;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: $marginLg;
+  }
+
+  &__help {
+    grid-column: 2;
+    margin: -$marginSm 0 0;
+    font-style: italic;
+    font-size: 0.9em;
+    color: var(--fontColorLight);
+  }
+
+  &__label {
+    text-align: right;
+
+    &--required {
+      font-weight: bold;
+
+        &::after {
+          content: "*";
+          color: $inputHighlightColor;
+          margin-left: $marginSm;
+        }
+    }
+  }
+
+  &__input {
+    padding: $padding;
+    background-color: var(--bgColor);
+    border: none;
+    border-radius: $borderRadius;
+    filter: $dropShadow;
+    outline: none;
+    font-size: 1rem;
+
+    &:focus {
+      box-shadow: 0 0 0 3px $inputHighlightColor;
+    }
+
+    &--select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      padding-right: $paddingLg;
+    }
+
+    &--textarea {
+      height: 10rem;
+      line-height: 1.5;
+    }
+
+    &-wrapper {
+      position: relative;
+
+      &::after {
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      &--select {
+        width: min-content;
+
+        &::after {
+          content: "▾";
+          right: calc(#{$padding} / 2);
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / -1;
+
+    > * + * {
+      margin-left: $margin;
+    }
+
+    .osl-button--delete {
+      order: -1;
+      justify-self: flex-start;
+    }
+  }
+
+  &:invalid {
+    .osl-button--submit {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  @media (max-width: 500px) {
+    & {
+      grid-template-columns: 1fr;
+    }
+
+    &__help {
+      grid-column: 1;
+    }
+
+    &__label {
+      margin-bottom: -$marginSm;
+      text-align: left;
+    }
+  }
+}
